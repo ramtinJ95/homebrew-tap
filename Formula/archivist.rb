@@ -9,7 +9,7 @@ class Archivist < Formula
 
   def install
     system "go", "build", *std_go_args(
-      ldflags: "-s -w -X github.com/ramtinJ95/archivist/internal/cli.Version=v#{version}"
+      ldflags: "-s -w -X github.com/ramtinJ95/archivist/internal/cli.Version=v#{version}",
     ), "./cmd/archivist"
   end
 
