@@ -1,8 +1,8 @@
 class Macarchy < Formula
   desc "Theme-driven macOS environment"
   homepage "https://github.com/ramtinJ95/macarchy"
-  url "https://github.com/ramtinJ95/macarchy/releases/download/v0.13.1/macarchy-0.13.1-arm64-apple-darwin.tar.gz"
-  sha256 "a11db615b85f801d3cf85fb7fccef6644eec0444b180fde2cd52c583b917f503"
+  url "https://github.com/ramtinJ95/macarchy/releases/download/v0.14.0/macarchy-0.14.0-arm64-apple-darwin.tar.gz"
+  sha256 "81eba06db45b5c625c7b27a53f78b06a41fe02e5552932c7e43077fc27ba85b2"
   license "MIT"
 
   depends_on arch: :arm64
@@ -10,11 +10,12 @@ class Macarchy < Formula
   depends_on maximum_macos: :tahoe
 
   def install
-    prefix.install "bin", "share"
+    prefix.install "bin", "libexec", "share"
   end
 
   test do
     assert_equal "#{version}\n", shell_output("#{bin}/macarchy --version")
+    assert_predicate libexec/"ttfx", :executable?
 
     info = JSON.parse(shell_output("#{bin}/macarchy version --json"))
     assert_equal version.to_s, info.fetch("version")
