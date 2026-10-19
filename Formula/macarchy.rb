@@ -1,8 +1,8 @@
 class Macarchy < Formula
   desc "Theme-driven macOS environment"
   homepage "https://github.com/ramtinJ95/macarchy"
-  url "https://github.com/ramtinJ95/macarchy/releases/download/v0.14.2/macarchy-0.14.2-arm64-apple-darwin.tar.gz"
-  sha256 "5b3b0aa87457f0ce6ff98a2360a8749b9e03ff66f7679bce11c6263d28627d15"
+  url "https://github.com/ramtinJ95/macarchy/releases/download/v0.14.4/macarchy-0.14.4-arm64-apple-darwin.tar.gz"
+  sha256 "4bab6e7fd0ec59d981534ad8ca08c55ffdf716bad7fb34b0078af3f5dbe0de57"
   license "MIT"
 
   depends_on arch: :arm64
